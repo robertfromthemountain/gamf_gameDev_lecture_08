@@ -3,26 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class brick : MonoBehaviour
+public class inputScript : MonoBehaviour
 {
-    public Text textValue;
-    public Slider valueSetter;
+    public Text title;
+    public InputField inputField;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void OnValidate()
+    public void RefreshText()
     {
-        textValue.text = "Value: " + valueSetter.value;
-
-        transform.localScale = new Vector3(valueSetter.value, 1, 1);
+      title.text = inputField.text;
     }
 }
